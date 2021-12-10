@@ -23,6 +23,9 @@ def update():
     texoffset += time.dt * 0.4 
     texoffset1 += time.dt * 0.1
     
+    if player.controller.y < -3:
+        player.controller.position = (-13.1947, 0, 8.8722)
+    
     if held_keys['shift']:  
         player.controller.speed = 10
     else:
